@@ -19,6 +19,10 @@ execute "Install Tomcat Server" do
   command "bash /tmp/install_tomcat.sh"
 end
 
+cookbook_file "/usr/local/tomcatDev/conf/server.xml" do
+ source "server.xml"
+end
+
 cookbook_file "/usr/local/tomcatDev/conf/tomcat-users.xml" do
  source "tomcat-users.xml"
 end
