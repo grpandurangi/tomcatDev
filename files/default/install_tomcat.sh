@@ -24,6 +24,10 @@ if [[ ! -e apache-tomcat-7.0.65.tar.gz ]] ; then
 wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7.0.65.tar.gz
 fi
 tar -zxvf apache-tomcat-7.0.65.tar.gz >/dev/null
+
+if [[ -d $TOMCAT_FOLDER ]]; then
+
+rm -rf $TOMCAT_FOLDER
 mv apache-tomcat-7.0.65 $TOMCAT_FOLDER
 
-$TOMCAT_FOLDER/bin/startup.sh
+fi
