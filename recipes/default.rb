@@ -27,6 +27,10 @@ cookbook_file "/usr/local/tomcatDev/conf/tomcat-users.xml" do
  source "tomcat-users.xml"
 end
 
+cookbook_file "/usr/local/tomcatDev/webapps/MongoDBWebapp/WEB-INF/web.xml" do
+ source "web.xml"
+end
+
 execute 'Execute my script' do 
   user    'root'
   cwd     '/usr/local/tomcatDev/bin/'
