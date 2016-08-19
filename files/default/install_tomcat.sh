@@ -31,3 +31,6 @@ rm -rf $TOMCAT_FOLDER
 mv apache-tomcat-7.0.65 $TOMCAT_FOLDER
 
 fi
+
+
+$TOMCAT_FOLDER/bin/startup.sh
