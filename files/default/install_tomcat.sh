@@ -26,11 +26,9 @@ fi
 tar -zxvf apache-tomcat-7.0.65.tar.gz >/dev/null
 
 if [[ -d $TOMCAT_FOLDER ]]; then
-
 rm -rf $TOMCAT_FOLDER
-mv apache-tomcat-7.0.65 $TOMCAT_FOLDER
-
 fi
 
+mv apache-tomcat-7.0.65 $TOMCAT_FOLDER
 
 $TOMCAT_FOLDER/bin/startup.sh
