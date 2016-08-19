@@ -12,7 +12,7 @@ mkdir $BASE_FOLDER
 
 fi
 
-rpm -qa|grep java|grep openjdk >/dev/null
+rpm -qa|grep "^java" >/dev/null
 RC=$?
 
 if [[ "$RC" -gt "0" ]]; then
@@ -25,7 +25,5 @@ wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7
 fi
 tar -zxvf apache-tomcat-7.0.65.tar.gz >/dev/null
 mv apache-tomcat-7.0.65 $TOMCAT_FOLDER
-sed -i 's/8080/8091/g' $TOMCAT_FOLDER/conf/server.xml
-sed -i 's/8443/8445/g' $TOMCAT_FOLDER/conf/server.xml
 
 $TOMCAT_FOLDER/bin/startup.sh
